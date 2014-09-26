@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">GlassDeere</string>
+    <string name="stop_service_mi_text">Close</string>
+    <string name="dismiss_alert_mi_text">Dismiss</string>
+    <string name="deere_voicehook">Seedstar connect</string>
+	<string name="deere_statshook">Get Planting Status</string>
+	<string name="time_stamp">Just now</string>
+	<string name="singulation">Singulation</string>
+	<string name="ride_qual">Ride Quality</string>
+	<string name="df_margin1">Downforce Margin</string>
+	<string name="cov">Coefficient of Variation</string>
+	<string name="act_pop">Seed Population</string>
+	<string name="max">Max</string>
+	<string name="min">Min</string>
+	<string name="current">Current</string>
+	<string name="ave">Average</string>
+	<string name="change">Change</string>
+	<string name="resume_mi_text">Resume</string>
+	<string name="get_stats_mi_text">Planting Status</string>
+	<string name="df_margin2">Downforce Margin 2</string>
+	<string name="alerts_remaining">You have x alerts for review</string>
+
+	<string name="report_alert_mi_text">Report</string>
+	<string name="ready_for_alerts">Standing by&#8230;</string>
+	<string name="connecting_text">Connecting&#8230;</string>
+
+	
+</resources>

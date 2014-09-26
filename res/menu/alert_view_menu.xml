@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/get_status_mi"
+        android:icon="@drawable/dashboard"
+        android:title="@string/get_stats_mi_text"/>
+    <item
+        android:id="@+id/report_alert_mi"
+        android:icon="@drawable/report"
+        android:title="@string/report_alert_mi_text"/>
+
+</menu>

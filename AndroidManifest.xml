@@ -1,0 +1,87 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.repco.deere.glass"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <uses-library
+            android:name="com.google.android.glass"
+            android:required="true" />
+
+        <activity
+            android:name="com.repco.deere.glass.AlertsMenuActivity"
+            android:enabled="true"
+            android:immersive="true"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.repco.deere.glass.AlertViewActivty"
+            android:enabled="true"
+            android:icon="@drawable/tractor"
+            android:immersive="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/deere_show" />
+        </activity>
+        <activity
+            android:name="com.repco.deere.glass.StatusViewActivity"
+            android:enabled="true"
+            android:icon="@drawable/dashboard"
+            android:immersive="true"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/read_stats" />
+
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.repco.deere.glass.AlertService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version" />
+        </service>
+    </application>
+
+</manifest>

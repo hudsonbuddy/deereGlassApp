@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/body_layout"
+        android:layout_width="150px"
+        android:layout_height="150px"
+        android:layout_marginLeft="@dimen/glass_card_margin"
+        android:layout_marginRight="@dimen/glass_card_margin"
+        android:layout_marginTop="@dimen/glass_card_margin"
+        android:background="@drawable/deere_icon"
+        android:layout_gravity="center_horizontal"
+        tools:ignore="UselessLeaf" >
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/glass_card_footer_margin"
+        android:layout_marginLeft="@dimen/glass_card_margin"
+        android:layout_marginRight="@dimen/glass_card_margin"
+        >
+
+        <!--
+             The footer view will grow to fit as much content as possible while the
+             timestamp view keeps a fixed width. If the footer text is too long, it
+             will be ellipsized with a 40px margin between it and the timestamp.
+        -->
+
+        <TextView
+            android:id="@+id/ready_for_alerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/glass_card_margin"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/connecting_text"
+            android:textColor="@color/yellow_glass" />
+    </RelativeLayout>
+
+</FrameLayout>

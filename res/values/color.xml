@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="opaque_red">#f00</color>
+   <color name="translucent_red">#cc3333</color>
+   <color name="opaque_yellow">#ff0</color>
+   <color name="translucent_yellow">#60ffff00</color>
+   <color name="green_glass">#99cc33</color>
+   <color name="yellow_glass">#ddbb11</color>
+</resources>
